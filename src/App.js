@@ -1,7 +1,10 @@
+import React, {useRef} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const videoRef = useRef(null);
+  setTimeout(() => console.log(videoRef), 1000);
   return (
     <div className="App">
       <header className="App-header">
