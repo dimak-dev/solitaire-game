@@ -2,14 +2,23 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InterpolateHtmlPlugin = require("interpolate-html-plugin");
 
-const isProduction = true;
+const isProduction = false;
 const publicUrl = '/'
 
 module.exports = {
     entry: './src/index.js',
+    resolve: {
+        alias: {
+            'Components': path.resolve(__dirname, './src/components/'),
+            'Pages': path.resolve(__dirname, './src/pages/'),
+            'Types': path.resolve(__dirname, './src/types/'),
+            'Utils': path.resolve(__dirname, './src/utils/'),
+        },
+        extensions: ['.tsx', '.ts', '.js'],
+    },
     mode: isProduction ? 'production' : 'development',
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, './dist'),
         pathinfo: !isProduction,
         filename: isProduction ? 'static/js/[name].[contenthash:8].js' : 'static/js/bundle.js',
         chunkFilename: isProduction ? 'static/js/[name].[contenthash:8].chunk.js' : 'static/js/[name].chunk.js',
@@ -59,18 +68,22 @@ module.exports = {
                 // type: 'asset/resource',
                 use: [
                     'style-loader',
-                    {
-                        loader: 'css-loader'
-                    }
+                    'css-loader',
                 ],
                 generator: {
                     filename: 'static/css/[name].[hash][ext]'
                 }
             },
+
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
         ]
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
         new HtmlWebpackPlugin({

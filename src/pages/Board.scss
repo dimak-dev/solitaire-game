@@ -1,0 +1,46 @@
+.board {
+  display: block;
+  width: 100%;
+  max-width: 1080px;
+  /*border-style: solid;*/
+  border-color: white;
+  border-width: 1px;
+
+  .foundations {
+    display: flex;
+
+    .foundation {
+      flex: 1;
+    }
+
+    .waste {
+      flex: 2;
+    }
+
+    .talon {
+      flex: 1;
+    }
+  }
+
+  .piles {
+    display: flex;
+    margin-top: 1rem;
+
+    .pile {
+      flex: 1;
+
+      .card-placeholder {
+        margin-bottom: -167.5px;
+
+        @media (max-width: 1080px) {
+          margin-bottom: -15.5vw;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}

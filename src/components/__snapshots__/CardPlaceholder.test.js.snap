@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot of CardPlaceholder Component 1`] = `
+<div
+  className="card-placeholder"
+>
+  <div
+    className="icon-wrapper"
+  >
+    <div
+      className="icon"
+    >
+      ♤ ♧
+      <br />
+      ♡ ♢
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of CardPlaceholder Component with Card as Children 1`] = `
+<div
+  className="card-placeholder"
+>
+  <div
+    className="card red"
+  >
+    <div
+      className="flex-wrapper"
+    >
+      <div
+        className="top-line"
+      >
+        1
+        ♥
+      </div>
+      <div
+        className="bottom-line"
+      >
+        1
+        ♥
+      </div>
+    </div>
+  </div>
+</div>
+`;

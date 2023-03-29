@@ -1,0 +1,1197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot of Card Component 1`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      A
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      A
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 2`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      1
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      1
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 3`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      2
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      2
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 4`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      3
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      3
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 5`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      4
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      4
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 6`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      5
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      5
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 7`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      6
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      6
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 8`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      7
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      7
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 9`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      8
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      8
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 10`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      9
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      9
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 11`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      J
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      J
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 12`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      Q
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      Q
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 13`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      K
+      ♣
+    </div>
+    <div
+      className="bottom-line"
+    >
+      K
+      ♣
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 14`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      A
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      A
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 15`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      1
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      1
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 16`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      2
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      2
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 17`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      3
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      3
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 18`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      4
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      4
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 19`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      5
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      5
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 20`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      6
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      6
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 21`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      7
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      7
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 22`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      8
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      8
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 23`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      9
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      9
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 24`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      J
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      J
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 25`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      Q
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      Q
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 26`] = `
+<div
+  className="card black"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      K
+      ♠
+    </div>
+    <div
+      className="bottom-line"
+    >
+      K
+      ♠
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 27`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      A
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      A
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 28`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      1
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      1
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 29`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      2
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      2
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 30`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      3
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      3
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 31`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      4
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      4
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 32`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      5
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      5
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 33`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      6
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      6
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 34`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      7
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      7
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 35`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      8
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      8
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 36`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      9
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      9
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 37`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      J
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      J
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 38`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      Q
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      Q
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 39`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      K
+      ♥
+    </div>
+    <div
+      className="bottom-line"
+    >
+      K
+      ♥
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 40`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      A
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      A
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 41`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      1
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      1
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 42`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      2
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      2
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 43`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      3
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      3
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 44`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      4
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      4
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 45`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      5
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      5
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 46`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      6
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      6
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 47`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      7
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      7
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 48`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      8
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      8
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 49`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      9
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      9
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 50`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      J
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      J
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 51`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      Q
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      Q
+      ♦
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot of Card Component 52`] = `
+<div
+  className="card red"
+>
+  <div
+    className="flex-wrapper"
+  >
+    <div
+      className="top-line"
+    >
+      K
+      ♦
+    </div>
+    <div
+      className="bottom-line"
+    >
+      K
+      ♦
+    </div>
+  </div>
+</div>
+`;
