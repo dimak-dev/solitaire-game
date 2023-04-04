@@ -5,6 +5,7 @@ module.exports = {
         '\\.(s?css|less)$': '<rootDir>/src/__mocks__/styleMock.js',
         '^Components(.*)$': '<rootDir>/src/components$1',
         '^Types(.*)$': '<rootDir>/src/types$1',
+        '^Redux(.*)$': '<rootDir>/src/redux$1',
         '^Utils(.*)$': '<rootDir>/src/utils$1',
     },
     testEnvironment: 'jsdom',

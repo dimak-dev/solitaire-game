@@ -5,6 +5,7 @@
     "paths": {
       "Components/*": ["./src/components/*"],
       "Pages/*": ["./src/pages/*"],
+      "Redux/*": ["./src/redux/*"],
       "Types/*": ["./src/types/*"],
       "Utils/*": ["./src/utils/*"]
     },

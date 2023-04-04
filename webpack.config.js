@@ -11,6 +11,7 @@ module.exports = {
         alias: {
             'Components': path.resolve(__dirname, './src/components/'),
             'Pages': path.resolve(__dirname, './src/pages/'),
+            'Redux': path.resolve(__dirname, './src/redux/'),
             'Types': path.resolve(__dirname, './src/types/'),
             'Utils': path.resolve(__dirname, './src/utils/'),
         },
