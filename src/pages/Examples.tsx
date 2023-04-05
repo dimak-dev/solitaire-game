@@ -3,6 +3,7 @@ import CardPlaceholder from 'Components/CardPlaceholder';
 import React from 'react';
 import {ECardSuit} from "Types/ECardSuit";
 import {ECardValue} from "Types/ECardValue";
+import ReverseSideOfCard from "Components/ReverseSideOfCard";
 
 export default function Examples() {
     return (
@@ -12,6 +13,9 @@ export default function Examples() {
             <CardPlaceholder/>
             <CardPlaceholder>
                 <Card suit={ECardSuit.DIAMOND} value={ECardValue.KING}/>
+            </CardPlaceholder>
+            <CardPlaceholder>
+                <ReverseSideOfCard/>
             </CardPlaceholder>
 
 

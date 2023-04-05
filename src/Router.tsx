@@ -1,6 +1,8 @@
-import { AppBar, Box, Button, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
-import React, {useState, lazy, Suspense, useMemo} from 'react';
+import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
+import React, {lazy, Suspense} from 'react';
 import {createHashRouter, RouterProvider} from "react-router-dom";
+import {gameBoardActions} from "Redux/game";
+import {useDispatch} from "react-redux";
 
 const LearnReact = lazy(() => import('Pages/learn-react/LearnReact'));
 const Index = lazy(() => import('Pages/index/Index'));
@@ -27,6 +29,7 @@ const router = createHashRouter([
 ]);
 
 export default function Router() {
+    const dispatch = useDispatch();
     return (
         <div>
             <AppBar position='static'>
@@ -49,6 +52,10 @@ export default function Router() {
 
                         <Button sx={{color: 'white'}} onClick={() => router.navigate('/board')}>
                             Board
+                        </Button>
+
+                        <Button sx={{color: 'white'}} onClick={() => dispatch(gameBoardActions.newGame())}>
+                            New Game
                         </Button>
                     </Box>
                 </Toolbar>

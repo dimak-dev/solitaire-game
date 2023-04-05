@@ -2,46 +2,49 @@ import React from "react";
 import './Board.scss';
 import CardPlaceholder from "Components/CardPlaceholder";
 import Card from "Components/Card";
-import {ECardSuit} from "Types/ECardSuit";
-import {ECardValue} from "Types/ECardValue";
+import ReverseSideOfCard from "Components/ReverseSideOfCard";
+import {useAppSelector} from "Redux/hooks/reduxHooks";
 
 export default function Board() {
+    const gameBoard = useAppSelector(state => state.gameBoardReducer);
     return (
         <div className="board">
             <div className="foundations">
-                <div className="foundation first">
-                    <CardPlaceholder/>
-                </div>
-                <div className="foundation second">
-                    <CardPlaceholder/>
-                </div>
-                <div className="foundation third">
-                    <CardPlaceholder/>
-                </div>
-                <div className="foundation fourth">
-                    <CardPlaceholder/>
-                </div>
+                {gameBoard.foundations.map((foundation) => (
+                    <div className="foundation" key={foundation.id}>
+                        <CardPlaceholder>
+                            {foundation.cards.length && (
+                                <Card suit={foundation.cards[length - 1].suit} value={foundation.cards[length - 1].value}/>
+                            )}
+                        </CardPlaceholder>
+                    </div>
+                ))}
 
+                {/*The Talon (or “Waste”) Pile*/}
                 <div className="waste"/>
 
+                {/*The Stock (or “Hand”) Pile*/}
                 <div className="talon">
-                    <CardPlaceholder/>
+                    <CardPlaceholder>
+                        {gameBoard.stock.length && (<ReverseSideOfCard/>)}
+                    </CardPlaceholder>
                 </div>
             </div>
 
             <div className="piles">
-                <div className="pile first"><CardPlaceholder/></div>
-                <div className="pile second"><CardPlaceholder/></div>
-                <div className="pile third"><CardPlaceholder/></div>
-                <div className="pile fourth"><CardPlaceholder/></div>
-                <div className="pile fifth"><CardPlaceholder/></div>
-                <div className="pile sixth"><CardPlaceholder/></div>
-                <div className="pile seventh">
-                    <CardPlaceholder><Card suit={ECardSuit.SPADE} value={ECardValue.JACK}/></CardPlaceholder>
-                    <CardPlaceholder><Card suit={ECardSuit.DIAMOND} value={ECardValue.SIX}/></CardPlaceholder>
-                    <CardPlaceholder><Card suit={ECardSuit.CLUB} value={ECardValue.EIGHT}/></CardPlaceholder>
-                    <CardPlaceholder/>
-                </div>
+                {gameBoard.tableau.map((pile) => (
+                    <div className="pile" key={pile.id}>
+                        {pile.cards.map((card) => (
+                            <CardPlaceholder>
+                                {card.isOpen && (
+                                    <Card suit={card.card.suit} value={card.card.value}/>
+                                ) || (
+                                    <ReverseSideOfCard/>
+                                ) }
+                            </CardPlaceholder>
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
     )
