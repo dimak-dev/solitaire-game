@@ -34,10 +34,10 @@ export default function Board() {
             <div className="piles">
                 {gameBoard.tableau.map((pile) => (
                     <div className="pile" key={pile.id}>
-                        {pile.cards.map((card) => (
-                            <CardPlaceholder>
-                                {card.isOpen && (
-                                    <Card suit={card.card.suit} value={card.card.value}/>
+                        {pile.cards.map(({card, isOpen}) => (
+                            <CardPlaceholder key={`card-in-pile-${card.value}-${card.suit}`}>
+                                {isOpen && (
+                                    <Card suit={card.suit} value={card.value}/>
                                 ) || (
                                     <ReverseSideOfCard/>
                                 ) }

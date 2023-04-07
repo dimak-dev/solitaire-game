@@ -1,0 +1,34 @@
+.card-placeholder {
+    width: 14.2vw;
+    max-width: 154px;
+    height: 19.5vw;
+    max-height: 209px;
+    display: block;
+    position: relative;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: rgba(25, 137, 234);
+    border-width: 1px;
+    box-sizing: border-box;
+    background-color: rgba(25, 137, 234, 0.3);
+    overflow: hidden;
+
+    .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .icon {
+            color: rgba(255, 255, 255, 0.499);
+            padding: 5px;
+            display: inline-block;
+            font-size: 3vw;
+
+            @media (min-width: 1080px) {
+                font-size: 32px;
+            }
+        }
+    }
+}

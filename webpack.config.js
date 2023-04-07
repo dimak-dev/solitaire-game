@@ -46,6 +46,10 @@ module.exports = {
                 use: 'html-loader'
             },
             {
+                test: /\.json$/,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.svg/,
                 // use: [
                 //     {

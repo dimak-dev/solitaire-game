@@ -1,5 +1,5 @@
 import React from 'react';
-import './CardPlaceholder.css';
+import './CardPlaceholder.scss';
 
 interface ICardPlaceholderProps {
     children?: JSX.Element,
