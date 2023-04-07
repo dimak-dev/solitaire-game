@@ -3,10 +3,17 @@ import './Board.scss';
 import CardPlaceholder from "Components/CardPlaceholder";
 import Card from "Components/Card";
 import ReverseSideOfCard from "Components/ReverseSideOfCard";
-import {useAppSelector} from "Redux/hooks/reduxHooks";
+import {useAppDispatch, useAppSelector} from "Redux/hooks/reduxHooks";
+import {gameBoardActions} from "Redux/game";
 
 export default function Board() {
     const gameBoard = useAppSelector(state => state.gameBoardReducer);
+    const dispatch = useAppDispatch();
+
+    const onPickFromStock = () => {
+        dispatch(gameBoardActions.pickCardsFromStock());
+    };
+
     return (
         <div className="board">
             <div className="foundations">
@@ -14,19 +21,26 @@ export default function Board() {
                     <div className="foundation" key={foundation.id}>
                         <CardPlaceholder>
                             {foundation.cards.length && (
-                                <Card suit={foundation.cards[length - 1].suit} value={foundation.cards[length - 1].value}/>
+                                <Card suit={foundation.cards[foundation.cards.length - 1].suit} value={foundation.cards[foundation.cards.length - 1].value}/>
                             )}
                         </CardPlaceholder>
                     </div>
                 ))}
 
                 {/*The Talon (or “Waste”) Pile*/}
-                <div className="waste"/>
+                <div className="talon">
+                    {/* One card mode only */}
+                    {!!gameBoard.talon.length && (
+                        <CardPlaceholder>
+                            <Card suit={gameBoard.talon[gameBoard.talon.length - 1].suit} value={gameBoard.talon[gameBoard.talon.length - 1].value}/>
+                        </CardPlaceholder>
+                    )}
+                </div>
 
                 {/*The Stock (or “Hand”) Pile*/}
-                <div className="talon">
+                <div className="stock">
                     <CardPlaceholder>
-                        {gameBoard.stock.length && (<ReverseSideOfCard/>)}
+                        {!!gameBoard.stock.length && (<ReverseSideOfCard onClick={onPickFromStock}/>)}
                     </CardPlaceholder>
                 </div>
             </div>

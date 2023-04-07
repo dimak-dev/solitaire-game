@@ -2,7 +2,7 @@ import {IGameBoard} from "Types/IGameBoard";
 import {initializeFoundations, pickCardsForTableauPile} from "Utils/game";
 import {initializeShuffledPackOfCards} from "Utils/packOfCards";
 
-export default function newGameReducer(state: IGameBoard) {
+export default function newGameReducer(state: IGameBoard): void {
     // shuffled pack of cards
     let packOfCard = initializeShuffledPackOfCards();
 

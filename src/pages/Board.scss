@@ -13,11 +13,13 @@
       flex: 1;
     }
 
-    .waste {
+    .talon {
       flex: 2;
+      display: flex;
+      justify-content: center;
     }
 
-    .talon {
+    .stock {
       flex: 1;
     }
   }
