@@ -10,9 +10,17 @@ export default function Board() {
     const gameBoard = useAppSelector(state => state.gameBoardReducer);
     const dispatch = useAppDispatch();
 
-    const onPickFromStock = () => {
+    const onPickFromStockClick = () => {
         dispatch(gameBoardActions.pickCardsFromStock());
     };
+
+    const onEmptyStockClick = () => {
+        dispatch(gameBoardActions.resetStock());
+    }
+
+    const onTalonClick = () => {
+
+    }
 
     return (
         <div className="board">
@@ -31,7 +39,7 @@ export default function Board() {
                 <div className="talon">
                     {/* One card mode only */}
                     {!!gameBoard.talon.length && (
-                        <CardPlaceholder>
+                        <CardPlaceholder onClick={onTalonClick}>
                             <Card suit={gameBoard.talon[gameBoard.talon.length - 1].suit} value={gameBoard.talon[gameBoard.talon.length - 1].value}/>
                         </CardPlaceholder>
                     )}
@@ -39,9 +47,13 @@ export default function Board() {
 
                 {/*The Stock (or “Hand”) Pile*/}
                 <div className="stock">
-                    <CardPlaceholder>
-                        {!!gameBoard.stock.length && (<ReverseSideOfCard onClick={onPickFromStock}/>)}
-                    </CardPlaceholder>
+                    {gameBoard.stock.length && (
+                        <CardPlaceholder>
+                            {<ReverseSideOfCard onClick={onPickFromStockClick}/>}
+                        </CardPlaceholder>
+                    ) || (
+                        <CardPlaceholder  onClick={onEmptyStockClick}/>
+                    )}
                 </div>
             </div>
 

@@ -1,8 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {IGameBoard} from "Types/IGameBoard";
 import {initializeFoundations} from "Utils/game";
-import newGameReducer from "Redux/reducers/newGame";
+import newGameReducer from "Redux/reducers/newGameReducer";
 import pickCardsFromStockReducer from "Redux/reducers/pickCardsFromStockReducer";
+import resetStockReducer from "Redux/reducers/resetStockReducer";
 
 
 const initialState: IGameBoard = {
@@ -17,7 +18,8 @@ export const gameBoard = createSlice({
     initialState,
     reducers: {
         newGame: newGameReducer,
-        pickCardsFromStock: pickCardsFromStockReducer
+        pickCardsFromStock: pickCardsFromStockReducer,
+        resetStock: resetStockReducer,
     }
 });
 

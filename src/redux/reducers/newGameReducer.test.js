@@ -1,4 +1,4 @@
-import newGameReducer from "Redux/reducers/newGame";
+import newGameReducer from "Redux/reducers/newGameReducer";
 
 describe('New Game Reducer', () => {
     let state;
