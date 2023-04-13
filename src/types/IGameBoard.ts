@@ -49,8 +49,8 @@ export interface IPile {
  *  are brought into play according to the rules.
  */
 export interface IGameBoard {
-    foundations: Array<IFoundation>;
-    tableau: Array<IPile>;
+    foundations: [] | [IFoundation, IFoundation, IFoundation, IFoundation];
+    tableau: [] | [IPile, IPile, IPile, IPile, IPile, IPile, IPile];
     talon: Array<ICard>;
     stock: Array<ICard>;
 }
