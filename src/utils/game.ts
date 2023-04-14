@@ -1,22 +1,6 @@
-import {IFoundation} from "Types/IGameBoard";
 import {ICard} from "Types/ICard";
 import {ICardInPile} from "Types/ICardInPile";
 
-
-/**
- * Initialize foundations.
- *
- * @return {Array<IFoundation>} Array of foundations.
- */
-export function initializeFoundations(): Array<IFoundation> {
-    const foundations: Array<IFoundation> = [];
-
-    for (let i = 0; i < 4; i++) {
-        foundations.push({id: `foundation-${i}`, cards: []});
-    }
-
-    return foundations;
-}
 
 interface IResultAfterPickingForTableauPile {
     restPackOfCard: Array<ICard>;

@@ -2,8 +2,8 @@
  * Parts of the game board.
  */
 export enum EGameBoardPart {
-    FOUNDATIONS,
-    TABLEAU,
-    TALON,
-    STOCK,
+    FOUNDATIONS = 'foundation',
+    TABLEAU = 'tableau',
+    TALON = 'talon',
+    STOCK = 'stock',
 }

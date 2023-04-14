@@ -1,38 +1,6 @@
-import {initializeFoundations, pickCardsForTableauPile} from "Utils/game";
+import {pickCardsForTableauPile} from "Utils/game";
 
 describe('Game board', () => {
-    describe('Foundations', () => {
-
-        test('Array of foundations must contain only 4 elements', () => {
-            expect(initializeFoundations()).toHaveLength(4);
-        });
-
-        test('New foundations must contain piles for each suits, but suits is not set', () => {
-            const suits = initializeFoundations().map(f => f.suit);
-
-            expect(suits[0]).toBeUndefined();
-            expect(suits[1]).toBeUndefined();
-            expect(suits[2]).toBeUndefined();
-            expect(suits[0]).toBeUndefined();
-        });
-
-        test('New foundation must contain empty array of cards', () => {
-            const piles = initializeFoundations().map(f => f.cards);
-
-            expect(piles).toHaveLength(4);
-
-            expect(piles[0]).toBeInstanceOf(Array);
-            expect(piles[1]).toBeInstanceOf(Array);
-            expect(piles[2]).toBeInstanceOf(Array);
-            expect(piles[3]).toBeInstanceOf(Array);
-
-            expect(piles[0]).toHaveLength(0);
-            expect(piles[1]).toHaveLength(0);
-            expect(piles[2]).toHaveLength(0);
-            expect(piles[3]).toHaveLength(0);
-        });
-    });
-
     describe('Picking cards to piles', () => {
         test('Function is immutable', () => {
             const packOfCards = [1, 2, 3, 4];

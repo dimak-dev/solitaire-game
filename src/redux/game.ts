@@ -1,13 +1,13 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {IGameBoard} from "Types/IGameBoard";
-import {initializeFoundations} from "Utils/game";
 import newGameReducer from "Redux/reducers/newGameReducer";
 import pickCardsFromStockReducer from "Redux/reducers/pickCardsFromStockReducer";
 import resetStockReducer from "Redux/reducers/resetStockReducer";
+import initFoundations from "Redux/reducers/initializers/initFoundations";
 
 
 const initialState: IGameBoard = {
-    foundations: initializeFoundations(),
+    foundations: initFoundations(),
     stock: [],
     tableau: [],
     talon: [],
