@@ -12,7 +12,7 @@ module.exports = {
     roots: ['<rootDir>/src'],
     collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
     setupFilesAfterEnv: [
-        '<rootDir>/src/setupTests.js'
+        '<rootDir>/src/setupTests.ts'
     ],
     setupFiles: [
         'react-app-polyfill/jsdom'
