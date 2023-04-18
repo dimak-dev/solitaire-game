@@ -5,6 +5,9 @@ import Card from "Components/Card";
 import ReverseSideOfCard from "Components/ReverseSideOfCard";
 import {useAppDispatch, useAppSelector} from "Redux/hooks/reduxHooks";
 import {gameBoardActions} from "Redux/game";
+import Pile from "Components/Pile";
+import {IPile} from "Types/IGameBoard";
+import {ICard} from "Types/ICard";
 
 export default function Board() {
     const gameBoard = useAppSelector(state => state.gameBoardReducer);
@@ -16,7 +19,13 @@ export default function Board() {
 
     const onEmptyStockClick = () => {
         dispatch(gameBoardActions.resetStock());
-    }
+    };
+
+    const onCardOnTableauClick = (_: IPile['id'], card: ICard) => {
+        dispatch(gameBoardActions.showPossibleTargets(card));
+    };
+
+    const onTargetOnTableauClick = (pileId: IPile['id']) => {};
 
     return (
         <div className="board">
@@ -55,18 +64,13 @@ export default function Board() {
 
             <div className="piles">
                 {gameBoard.tableau.map((pile) => (
-                    <div className="pile" key={pile.id}>
-                        {pile.cards.map(({card, isOpen}) => (
-                            <CardPlaceholder key={`card-in-pile-${card.value}-${card.suit}`} onClick={() => dispatch(gameBoardActions.showPossibleTargets(card))}>
-                                {isOpen && (
-                                    <Card suit={card.suit} value={card.value}/>
-                                ) || (
-                                    <ReverseSideOfCard/>
-                                ) }
-                            </CardPlaceholder>
-                        ))}
-                        {gameBoard.possibleTargets.pilesIds.includes(pile.id) && <CardPlaceholder/>}
-                    </div>
+                    <Pile
+                        {...pile}
+                        isTarget={gameBoard.possibleTargets.pilesIds.includes(pile.id)}
+                        onCardClick={onCardOnTableauClick}
+                        onTargetClick={onTargetOnTableauClick}
+                        key={pile.id}
+                    />
                 ))}
             </div>
         </div>

@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pile component Empty pile 1`] = `
+<div
+  className="pile"
+  id="test-pile-id"
+>
+  <div
+    className="card-placeholder-mock"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Pile component One hidden and one opened card on pile 1`] = `
+<div
+  className="pile"
+  id="test-pile-id"
+>
+  <div
+    className="card-placeholder-mock"
+  >
+    <div
+      className="reverse-side-card-mock"
+      data-testid="reverse-side-card"
+    >
+      reverse side
+    </div>
+  </div>
+  <div
+    className="card-placeholder-mock"
+    onClick={[Function]}
+  >
+    <div
+      className="card-mock"
+      data-testid="test-card-2"
+    >
+      id: 
+      test-card-2
+      , suit: 
+      suit-2
+      , value: 
+      value-2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pile component One opened card on pile 1`] = `
+<div
+  className="pile"
+  id="test-pile-id"
+>
+  <div
+    className="card-placeholder-mock"
+    onClick={[Function]}
+  >
+    <div
+      className="card-mock"
+      data-testid="test-id"
+    >
+      id: 
+      test-id
+      , suit: 
+      test-suit
+      , value: 
+      test-value
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pile component Pile is target 1`] = `
+<div
+  className="pile"
+  id="test-pile-id"
+>
+  <div
+    className="card-placeholder-mock"
+  >
+    <div
+      className="reverse-side-card-mock"
+      data-testid="reverse-side-card"
+    >
+      reverse side
+    </div>
+  </div>
+  <div
+    className="card-placeholder-mock"
+    onClick={[Function]}
+  >
+    <div
+      className="card-mock"
+      data-testid="test-card-2"
+    >
+      id: 
+      test-card-2
+      , suit: 
+      suit-2
+      , value: 
+      value-2
+    </div>
+  </div>
+  <div
+    className="card-placeholder-mock"
+    onClick={[Function]}
+  />
+</div>
+`;
