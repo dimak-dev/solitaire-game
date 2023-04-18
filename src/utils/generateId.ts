@@ -5,12 +5,32 @@ enum ECounter {
 }
 
 /**
- * Counters.
+ * Length of id.
  */
-const counters: Record<ECounter, number> = {
-    [ECounter.FOUNDATION]: 0,
-    [ECounter.PILE]: 0,
-    [ECounter.CARD]: 0,
+const ID_LENGTH = 10;
+
+/**
+ * Generate random ID.
+ */
+function getRandomCharCode() {
+    let offset;
+    let length;
+
+    switch (Math.round((Math.random() * 100) % 3)) {
+        case 1: // numbers
+            offset = 48;
+            length = 10;
+            break;
+        case 2: // lower case letter
+            offset = 97;
+            length = 25;
+            break;
+        default:
+            offset = 65;
+            length = 25;
+    }
+
+    return ((Math.random() * 10000) % length) + offset;
 }
 
 /**
@@ -20,7 +40,13 @@ const counters: Record<ECounter, number> = {
  * @return {string} Unique id.
  */
 function generateId(boardPart: ECounter): string {
-    return `${boardPart}-id-${counters[boardPart]++}`;
+    let id = `${boardPart}-id-`;
+
+    for (let i = 0; i < ID_LENGTH; i++) {
+        id += String.fromCharCode(getRandomCharCode());
+    }
+
+    return id;
 }
 
 /**
