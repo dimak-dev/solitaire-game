@@ -2,6 +2,7 @@ import {ICard} from "Types/ICard";
 import {ECardSuit} from "Types/ECardSuit";
 import {ECardValue} from "Types/ECardValue";
 import {shuffleArrayByFisherAndYatesAlgorithm} from "Utils/shuffle";
+import {generateCardId} from "Utils/generateId";
 
 /**
  * Available card suits.
@@ -40,7 +41,7 @@ export function initializePackOfCards(): Array<ICard> {
 
     values.forEach(value => {
         suits.forEach(suit => {
-            packOfCard.push({value, suit});
+            packOfCard.push({value, suit, id: generateCardId()});
         });
     });
 

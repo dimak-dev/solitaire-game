@@ -58,6 +58,20 @@ export function generateFoundationId() {
     return generateId(ECounter.FOUNDATION);
 }
 
+/**
+ * Generate unique id for pile on tableau.
+ *
+ * @return {string} Unique id.
+ */
 export function generatePileId() {
     return generateId(ECounter.PILE);
+}
+
+/**
+ * Generate unique id for card.
+ *
+ * @return {string} Unique id.
+ */
+export function generateCardId() {
+    return generateId(ECounter.CARD);
 }

@@ -9,7 +9,7 @@ import {ECardSuit} from "Types/ECardSuit";
 import {ECardValue} from "Types/ECardValue";
 import {gameBoardActions} from "Redux/game";
 
-const testCard = {suit: ECardSuit.HEART, value: ECardValue.FOUR};
+const testCard = {suit: ECardSuit.HEART, value: ECardValue.FOUR, id: 'test-card-id'};
 const testPayload = gameBoardActions.showPossibleTargets(testCard);
 
 describe('Show possible targets for selected card - Reducer', () => {

@@ -5,6 +5,7 @@ import {ECardValue} from "Types/ECardValue";
  * Interface of playing card.
  */
 export interface ICard {
-    suit: ECardSuit,
-    value: ECardValue,
+    readonly id: string,
+    readonly suit: ECardSuit,
+    readonly value: ECardValue,
 }
