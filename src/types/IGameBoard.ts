@@ -27,6 +27,17 @@ export interface IPile {
 }
 
 /**
+ * Possible targets for selected card.
+ *
+ * @property {Array<IPile["id"]>} pilesIds Array of ids for possible piles on tableau.
+ * @property {Array<IFoundation["id"]>} foundationsIds Array of ids for possible foundations.
+ */
+interface IPossibleTargets {
+    pilesIds: Array<IPile["id"]>;
+    foundationsIds: Array<IFoundation["id"]>
+}
+
+/**
  * Interface of four different types of piles in Solitaire.
  *
  * @property {Array<IFoundation>} foundations
@@ -47,10 +58,14 @@ export interface IPile {
  *  If the entire pack is not laid out in a tableau at the beginning of a game,
  *  the remaining cards form the stock pile from which additional cards
  *  are brought into play according to the rules.
+ *
+ *  @property {IPossibleTargets} possibleTargets
+ *   Possible targets for selected card.
  */
 export interface IGameBoard {
     foundations: [] | [IFoundation, IFoundation, IFoundation, IFoundation];
     tableau: [] | [IPile, IPile, IPile, IPile, IPile, IPile, IPile];
     talon: Array<ICard>;
     stock: Array<ICard>;
+    possibleTargets: IPossibleTargets;
 }

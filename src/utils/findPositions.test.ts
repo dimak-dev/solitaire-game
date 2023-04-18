@@ -27,6 +27,7 @@ describe('Find positions of selected card', function () {
             ],
             talon: [],
             stock: [],
+            possibleTargets: {pilesIds: [], foundationsIds: []},
         };
     })
 

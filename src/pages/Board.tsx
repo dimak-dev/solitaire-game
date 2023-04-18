@@ -18,10 +18,6 @@ export default function Board() {
         dispatch(gameBoardActions.resetStock());
     }
 
-    const onTalonClick = () => {
-
-    }
-
     return (
         <div className="board">
             <div className="foundations">
@@ -39,7 +35,7 @@ export default function Board() {
                 <div className="talon">
                     {/* One card mode only */}
                     {!!gameBoard.talon.length && (
-                        <CardPlaceholder onClick={onTalonClick}>
+                        <CardPlaceholder onClick={() => dispatch(gameBoardActions.showPossibleTargets(gameBoard.talon[gameBoard.talon.length - 1]))}>
                             <Card suit={gameBoard.talon[gameBoard.talon.length - 1].suit} value={gameBoard.talon[gameBoard.talon.length - 1].value}/>
                         </CardPlaceholder>
                     )}
@@ -61,7 +57,7 @@ export default function Board() {
                 {gameBoard.tableau.map((pile) => (
                     <div className="pile" key={pile.id}>
                         {pile.cards.map(({card, isOpen}) => (
-                            <CardPlaceholder key={`card-in-pile-${card.value}-${card.suit}`}>
+                            <CardPlaceholder key={`card-in-pile-${card.value}-${card.suit}`} onClick={() => dispatch(gameBoardActions.showPossibleTargets(card))}>
                                 {isOpen && (
                                     <Card suit={card.suit} value={card.value}/>
                                 ) || (
@@ -69,6 +65,7 @@ export default function Board() {
                                 ) }
                             </CardPlaceholder>
                         ))}
+                        {gameBoard.possibleTargets.pilesIds.includes(pile.id) && <CardPlaceholder/>}
                     </div>
                 ))}
             </div>
