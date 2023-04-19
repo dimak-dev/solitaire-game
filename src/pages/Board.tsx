@@ -66,7 +66,6 @@ export default function Board() {
                 {gameBoard.tableau.map((pile) => (
                     <Pile
                         {...pile}
-                        isTarget={gameBoard.possibleTargets.pilesIds.includes(pile.id)}
                         onCardClick={onCardOnTableauClick}
                         onTargetClick={onTargetOnTableauClick}
                         key={pile.id}

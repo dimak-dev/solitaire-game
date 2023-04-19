@@ -11,23 +11,22 @@ describe('Find positions of selected card', function () {
     beforeEach(() => {
         state = {
             foundations: [
-                {id: 'test-foundation-1', cards: []},
-                {id: 'test-foundation-2', cards: []},
-                {id: 'test-foundation-3', cards: []},
-                {id: 'test-foundation-4', cards: []},
+                {id: 'test-foundation-1', cards: [], isTarget: false},
+                {id: 'test-foundation-2', cards: [], isTarget: false},
+                {id: 'test-foundation-3', cards: [], isTarget: false},
+                {id: 'test-foundation-4', cards: [], isTarget: false},
             ],
             tableau: [
-                {id: 'test-pile-1', cards: []},
-                {id: 'test-pile-2', cards: []},
-                {id: 'test-pile-3', cards: []},
-                {id: 'test-pile-4', cards: []},
-                {id: 'test-pile-5', cards: []},
-                {id: 'test-pile-6', cards: []},
-                {id: 'test-pile-7', cards: []},
+                {id: 'test-pile-1', cards: [], isTarget: false},
+                {id: 'test-pile-2', cards: [], isTarget: false},
+                {id: 'test-pile-3', cards: [], isTarget: false},
+                {id: 'test-pile-4', cards: [], isTarget: false},
+                {id: 'test-pile-5', cards: [], isTarget: false},
+                {id: 'test-pile-6', cards: [], isTarget: false},
+                {id: 'test-pile-7', cards: [], isTarget: false},
             ],
             talon: [],
             stock: [],
-            possibleTargets: {pilesIds: [], foundationsIds: []},
         };
     })
 

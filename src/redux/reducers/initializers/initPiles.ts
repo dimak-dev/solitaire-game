@@ -1,19 +1,17 @@
-import {IPile} from "Types/IGameBoard";
+import {IGameBoard} from "Types/IGameBoard";
 import {generatePileId} from "Utils/generateId";
-
-type TPiles = [IPile, IPile, IPile, IPile, IPile, IPile, IPile];
 
 /**
  * Generate seven empty piles.
  */
-export default function initPiles(): TPiles {
+export default function initPiles(): IGameBoard['tableau'] {
     return [
-        {id: generatePileId(), cards: []},
-        {id: generatePileId(), cards: []},
-        {id: generatePileId(), cards: []},
-        {id: generatePileId(), cards: []},
-        {id: generatePileId(), cards: []},
-        {id: generatePileId(), cards: []},
-        {id: generatePileId(), cards: []},
+        {id: generatePileId(), cards: [], isTarget: false},
+        {id: generatePileId(), cards: [], isTarget: false},
+        {id: generatePileId(), cards: [], isTarget: false},
+        {id: generatePileId(), cards: [], isTarget: false},
+        {id: generatePileId(), cards: [], isTarget: false},
+        {id: generatePileId(), cards: [], isTarget: false},
+        {id: generatePileId(), cards: [], isTarget: false},
     ]
 }

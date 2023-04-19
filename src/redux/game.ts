@@ -13,7 +13,6 @@ const initialState: IGameBoard = {
     stock: [],
     tableau: initPiles(),
     talon: [],
-    possibleTargets: {pilesIds: [], foundationsIds: []},
 };
 
 export const gameBoard = createSlice({

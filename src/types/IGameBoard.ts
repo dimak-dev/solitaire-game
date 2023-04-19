@@ -8,11 +8,13 @@ import {ICardInPile} from "Types/ICardInPile";
  * @property {string} id Id of foundation.
  * @property {ECardSuit} [suit] Suit of pile.
  * @property {Array<ICard>} cards Cards on foundation.
+ * @property {boolean} isTarget Is target for previously selected card.
  */
 export interface IFoundation {
     id: string;
     suit?: ECardSuit;
     cards: Array<ICard>;
+    isTarget: boolean;
 }
 
 /**
@@ -20,21 +22,12 @@ export interface IFoundation {
  *
  * @property {string} id Id.
  * @property {Array<ICardInPile>} cards Cards.
+ * @property {boolean} isTarget Is target for previously selected card.
  */
 export interface IPile {
     id: string;
     cards: Array<ICardInPile>;
-}
-
-/**
- * Possible targets for selected card.
- *
- * @property {Array<IPile["id"]>} pilesIds Array of ids for possible piles on tableau.
- * @property {Array<IFoundation["id"]>} foundationsIds Array of ids for possible foundations.
- */
-interface IPossibleTargets {
-    pilesIds: Array<IPile["id"]>;
-    foundationsIds: Array<IFoundation["id"]>
+    isTarget: boolean;
 }
 
 /**
@@ -58,14 +51,10 @@ interface IPossibleTargets {
  *  If the entire pack is not laid out in a tableau at the beginning of a game,
  *  the remaining cards form the stock pile from which additional cards
  *  are brought into play according to the rules.
- *
- *  @property {IPossibleTargets} possibleTargets
- *   Possible targets for selected card.
  */
 export interface IGameBoard {
     foundations: [] | [IFoundation, IFoundation, IFoundation, IFoundation];
     tableau: [] | [IPile, IPile, IPile, IPile, IPile, IPile, IPile];
     talon: Array<ICard>;
     stock: Array<ICard>;
-    possibleTargets: IPossibleTargets;
 }

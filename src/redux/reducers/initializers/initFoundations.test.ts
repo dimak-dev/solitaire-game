@@ -38,4 +38,18 @@ describe('Initializer for foundation', () => {
         expect(piles[2]).toHaveLength(0);
         expect(piles[3]).toHaveLength(0);
     });
+
+    test('New foundation must contain property isTarget and it may be falsy', () => {
+        const foundations = initFoundations();
+
+        expect(foundations).toHaveProperty('[0].isTarget');
+        expect(foundations).toHaveProperty('[1].isTarget');
+        expect(foundations).toHaveProperty('[2].isTarget');
+        expect(foundations).toHaveProperty('[3].isTarget');
+
+        expect(foundations[0].isTarget).toBeFalsy();
+        expect(foundations[1].isTarget).toBeFalsy();
+        expect(foundations[2].isTarget).toBeFalsy();
+        expect(foundations[3].isTarget).toBeFalsy();
+    });
 });

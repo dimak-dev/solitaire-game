@@ -18,23 +18,22 @@ describe('Show possible targets for selected card - Reducer', () => {
     beforeEach(() => {
         state = {
             foundations: [
-                {id: 'test-foundation-1', cards: []},
-                {id: 'test-foundation-2', cards: []},
-                {id: 'test-foundation-3', cards: []},
-                {id: 'test-foundation-4', cards: []},
+                {id: 'test-foundation-1', cards: [], isTarget: false},
+                {id: 'test-foundation-2', cards: [], isTarget: false},
+                {id: 'test-foundation-3', cards: [], isTarget: false},
+                {id: 'test-foundation-4', cards: [], isTarget: false},
             ],
             tableau: [
-                {id: 'test-pile-1', cards: []},
-                {id: 'test-pile-2', cards: []},
-                {id: 'test-pile-3', cards: []},
-                {id: 'test-pile-4', cards: []},
-                {id: 'test-pile-5', cards: []},
-                {id: 'test-pile-6', cards: []},
-                {id: 'test-pile-7', cards: []},
+                {id: 'test-pile-1', cards: [], isTarget: false},
+                {id: 'test-pile-2', cards: [], isTarget: false},
+                {id: 'test-pile-3', cards: [], isTarget: false},
+                {id: 'test-pile-4', cards: [], isTarget: false},
+                {id: 'test-pile-5', cards: [], isTarget: false},
+                {id: 'test-pile-6', cards: [], isTarget: false},
+                {id: 'test-pile-7', cards: [], isTarget: false},
             ],
             talon: [],
             stock: [],
-            possibleTargets: {pilesIds: ['garbage'], foundationsIds: ['garbage']},
         };
     })
 
@@ -44,7 +43,34 @@ describe('Show possible targets for selected card - Reducer', () => {
         showPossibleTargetsReducer(state, testPayload);
 
         expect(findTargetPositions).toHaveBeenCalled();
-        expect(state.possibleTargets).toStrictEqual({pilesIds: [], foundationsIds: []})
+        expect(state.foundations[0].isTarget).toBeFalsy();
+        expect(state.foundations[1].isTarget).toBeFalsy();
+        expect(state.foundations[2].isTarget).toBeFalsy();
+        expect(state.foundations[3].isTarget).toBeFalsy();
+
+        expect(state.tableau[0].isTarget).toBeFalsy();
+        expect(state.tableau[1].isTarget).toBeFalsy();
+        expect(state.tableau[2].isTarget).toBeFalsy();
+        expect(state.tableau[3].isTarget).toBeFalsy();
+        expect(state.tableau[4].isTarget).toBeFalsy();
+        expect(state.tableau[5].isTarget).toBeFalsy();
+        expect(state.tableau[6].isTarget).toBeFalsy();
+    });
+
+    test('Immutability', () => {
+        const originFoundation = state.foundations[1];
+        const originCardsOnFoundation = state.foundations[1].cards;
+        const originPile = state.tableau[3];
+        const originCardsOnTableau = state.tableau[3].cards;
+
+        (findTargetPositions as jest.Mock).mockReturnValue([]);
+
+        showPossibleTargetsReducer(state, testPayload);
+
+        expect(originFoundation === state.foundations[1]).toBeFalsy();
+        expect(originPile === state.tableau[3]).toBeFalsy();
+        expect(originCardsOnFoundation === state.foundations[1].cards).toBeTruthy();
+        expect(originCardsOnTableau === state.tableau[3].cards).toBeTruthy();
     });
 
     test('Two targets on tableau', () => {
@@ -56,13 +82,18 @@ describe('Show possible targets for selected card - Reducer', () => {
 
         showPossibleTargetsReducer(state, testPayload);
 
-        expect(state).toHaveProperty('possibleTargets.pilesIds');
-        expect(state.possibleTargets.pilesIds).toHaveLength(2);
-        expect(state.possibleTargets.pilesIds).toContain('test-pile-4');
-        expect(state.possibleTargets.pilesIds).toContain('test-pile-2');
+        expect(state.foundations[0].isTarget).toBeFalsy();
+        expect(state.foundations[1].isTarget).toBeFalsy();
+        expect(state.foundations[2].isTarget).toBeFalsy();
+        expect(state.foundations[3].isTarget).toBeFalsy();
 
-        expect(state).toHaveProperty('possibleTargets.foundationsIds');
-        expect(state.possibleTargets.foundationsIds).toHaveLength(0);
+        expect(state.tableau[0].isTarget).toBeFalsy();
+        expect(state.tableau[1].isTarget).toBeTruthy();
+        expect(state.tableau[2].isTarget).toBeFalsy();
+        expect(state.tableau[3].isTarget).toBeTruthy();
+        expect(state.tableau[4].isTarget).toBeFalsy();
+        expect(state.tableau[5].isTarget).toBeFalsy();
+        expect(state.tableau[6].isTarget).toBeFalsy();
     });
 
     test('Two targets on foundations', () => {
@@ -74,13 +105,18 @@ describe('Show possible targets for selected card - Reducer', () => {
 
         showPossibleTargetsReducer(state, testPayload);
 
-        expect(state).toHaveProperty('possibleTargets.pilesIds');
-        expect(state.possibleTargets.pilesIds).toHaveLength(0);
+        expect(state.foundations[0].isTarget).toBeFalsy();
+        expect(state.foundations[1].isTarget).toBeTruthy();
+        expect(state.foundations[2].isTarget).toBeFalsy();
+        expect(state.foundations[3].isTarget).toBeTruthy();
 
-        expect(state).toHaveProperty('possibleTargets.foundationsIds');
-        expect(state.possibleTargets.foundationsIds).toHaveLength(2);
-        expect(state.possibleTargets.foundationsIds).toContain('test-foundation-4');
-        expect(state.possibleTargets.foundationsIds).toContain('test-foundation-2');
+        expect(state.tableau[0].isTarget).toBeFalsy();
+        expect(state.tableau[1].isTarget).toBeFalsy();
+        expect(state.tableau[2].isTarget).toBeFalsy();
+        expect(state.tableau[3].isTarget).toBeFalsy();
+        expect(state.tableau[4].isTarget).toBeFalsy();
+        expect(state.tableau[5].isTarget).toBeFalsy();
+        expect(state.tableau[6].isTarget).toBeFalsy();
     });
 
     test('Two targets on foundations and two targets on tableau', () => {
@@ -94,14 +130,17 @@ describe('Show possible targets for selected card - Reducer', () => {
 
         showPossibleTargetsReducer(state, testPayload);
 
-        expect(state).toHaveProperty('possibleTargets.pilesIds');
-        expect(state.possibleTargets.pilesIds).toHaveLength(2);
-        expect(state.possibleTargets.pilesIds).toContain('test-pile-4');
-        expect(state.possibleTargets.pilesIds).toContain('test-pile-2');
+        expect(state.foundations[0].isTarget).toBeFalsy();
+        expect(state.foundations[1].isTarget).toBeTruthy();
+        expect(state.foundations[2].isTarget).toBeFalsy();
+        expect(state.foundations[3].isTarget).toBeTruthy();
 
-        expect(state).toHaveProperty('possibleTargets.foundationsIds');
-        expect(state.possibleTargets.foundationsIds).toHaveLength(2);
-        expect(state.possibleTargets.foundationsIds).toContain('test-foundation-4');
-        expect(state.possibleTargets.foundationsIds).toContain('test-foundation-2');
+        expect(state.tableau[0].isTarget).toBeFalsy();
+        expect(state.tableau[1].isTarget).toBeTruthy();
+        expect(state.tableau[2].isTarget).toBeFalsy();
+        expect(state.tableau[3].isTarget).toBeTruthy();
+        expect(state.tableau[4].isTarget).toBeFalsy();
+        expect(state.tableau[5].isTarget).toBeFalsy();
+        expect(state.tableau[6].isTarget).toBeFalsy();
     });
 });

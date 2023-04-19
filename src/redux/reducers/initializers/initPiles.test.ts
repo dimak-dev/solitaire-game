@@ -38,4 +38,24 @@ describe('Initializer for tableau piles', () => {
         expect(piles[5]).toHaveLength(0);
         expect(piles[6]).toHaveLength(0);
     });
+
+    test('New piles must contain property isTarget and it may be falsy', () => {
+        const piles = initPiles();
+
+        expect(piles).toHaveProperty('[0].isTarget');
+        expect(piles).toHaveProperty('[1].isTarget');
+        expect(piles).toHaveProperty('[2].isTarget');
+        expect(piles).toHaveProperty('[3].isTarget');
+        expect(piles).toHaveProperty('[4].isTarget');
+        expect(piles).toHaveProperty('[5].isTarget');
+        expect(piles).toHaveProperty('[6].isTarget');
+
+        expect(piles[0].isTarget).toBeFalsy();
+        expect(piles[1].isTarget).toBeFalsy();
+        expect(piles[2].isTarget).toBeFalsy();
+        expect(piles[3].isTarget).toBeFalsy();
+        expect(piles[4].isTarget).toBeFalsy();
+        expect(piles[5].isTarget).toBeFalsy();
+        expect(piles[6].isTarget).toBeFalsy();
+    });
 });
