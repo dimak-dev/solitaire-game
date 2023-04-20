@@ -44,7 +44,7 @@ export default function Pile({cards, id: pileId, isTarget, onCardClick, onTarget
             )}
 
             {(showEmptyPlaceholder || isTarget) && (
-                <CardPlaceholder onClick={() => onTargetClick(pileId)}/>
+                <CardPlaceholder isTarget={isTarget} onClick={() => onTargetClick(pileId)}/>
             )}
         </div>
     )

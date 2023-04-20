@@ -13,6 +13,10 @@
     background-color: rgba(25, 137, 234, 0.3);
     overflow: hidden;
 
+    &.target {
+        background-color: rgba(25, 137, 234, 0.5);
+    }
+
     .icon-wrapper {
         display: flex;
         align-items: center;

@@ -1,16 +1,11 @@
 import {EGameBoardPart} from "Types/EGameBoardPart";
-
-jest.mock('Utils/findPositions')
-
 import {findTargetPositions} from "Utils/findPositions";
-import {showPossibleTargetsReducer} from "Redux/reducers/showPossibleTargetsReducer";
+import showPossibleTargetsReducer from "Redux/reducers/showPossibleTargetsReducer";
 import {IGameBoard} from "Types/IGameBoard";
 import {ECardSuit} from "Types/ECardSuit";
 import {ECardValue} from "Types/ECardValue";
-import {gameBoardActions} from "Redux/game";
 
-const testCard = {suit: ECardSuit.HEART, value: ECardValue.FOUR, id: 'test-card-id'};
-const testPayload = gameBoardActions.showPossibleTargets(testCard);
+jest.mock('Utils/findPositions')
 
 describe('Show possible targets for selected card - Reducer', () => {
     let state: IGameBoard;
@@ -34,13 +29,21 @@ describe('Show possible targets for selected card - Reducer', () => {
             ],
             talon: [],
             stock: [],
+            selectedCard: {position: EGameBoardPart.TALON, card: {id: 'test-id', suit: ECardSuit.SPADE, value: ECardValue.SEVEN}},
         };
     })
 
+    test('Throws error when card is not selected', () => {
+        state.selectedCard = null;
+        const fn = () => showPossibleTargetsReducer(state);
+        expect(fn).toThrowError(/card is not selected/i)
+    });
+
     test('Empty targets', () => {
         (findTargetPositions as jest.Mock).mockReturnValue([]);
+        state.selectedCard = {position: EGameBoardPart.TALON, card: {id: 'test-id', suit: ECardSuit.SPADE, value: ECardValue.SEVEN}};
 
-        showPossibleTargetsReducer(state, testPayload);
+        showPossibleTargetsReducer(state);
 
         expect(findTargetPositions).toHaveBeenCalled();
         expect(state.foundations[0].isTarget).toBeFalsy();
@@ -65,7 +68,7 @@ describe('Show possible targets for selected card - Reducer', () => {
 
         (findTargetPositions as jest.Mock).mockReturnValue([]);
 
-        showPossibleTargetsReducer(state, testPayload);
+        showPossibleTargetsReducer(state);
 
         expect(originFoundation === state.foundations[1]).toBeFalsy();
         expect(originPile === state.tableau[3]).toBeFalsy();
@@ -80,7 +83,7 @@ describe('Show possible targets for selected card - Reducer', () => {
         ];
         (findTargetPositions as jest.Mock).mockReturnValue(mockValue);
 
-        showPossibleTargetsReducer(state, testPayload);
+        showPossibleTargetsReducer(state);
 
         expect(state.foundations[0].isTarget).toBeFalsy();
         expect(state.foundations[1].isTarget).toBeFalsy();
@@ -103,7 +106,7 @@ describe('Show possible targets for selected card - Reducer', () => {
         ];
         (findTargetPositions as jest.Mock).mockReturnValue(mockFoundationValue);
 
-        showPossibleTargetsReducer(state, testPayload);
+        showPossibleTargetsReducer(state);
 
         expect(state.foundations[0].isTarget).toBeFalsy();
         expect(state.foundations[1].isTarget).toBeTruthy();
@@ -128,7 +131,7 @@ describe('Show possible targets for selected card - Reducer', () => {
         ];
         (findTargetPositions as jest.Mock).mockReturnValue(mockFoundationValue);
 
-        showPossibleTargetsReducer(state, testPayload);
+        showPossibleTargetsReducer(state);
 
         expect(state.foundations[0].isTarget).toBeFalsy();
         expect(state.foundations[1].isTarget).toBeTruthy();

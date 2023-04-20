@@ -1,6 +1,7 @@
 import {ECardSuit} from "Types/ECardSuit";
 import {ICard} from "Types/ICard";
 import {ICardInPile} from "Types/ICardInPile";
+import {EGameBoardPart} from "Types/EGameBoardPart";
 
 /**
  * Foundation.
@@ -31,6 +32,32 @@ export interface IPile {
 }
 
 /**
+ * Type for selected card from tableau.
+ */
+type TSelectedCardFromTableau = {
+    position: EGameBoardPart.TABLEAU;
+    pileId: IPile['id'];
+    card: ICard;
+}
+
+/**
+ * Type for selected card from tableau.
+ */
+type TSelectedCardFromFoundation = {
+    position: EGameBoardPart.FOUNDATIONS;
+    foundationId: IFoundation['id'];
+    card: ICard;
+}
+
+/**
+ * Type for selected card from talon.
+ */
+type TSelectedCardFromTalon = {
+    position: EGameBoardPart.TALON;
+    card: ICard;
+}
+
+/**
  * Interface of four different types of piles in Solitaire.
  *
  * @property {Array<IFoundation>} foundations
@@ -51,10 +78,14 @@ export interface IPile {
  *  If the entire pack is not laid out in a tableau at the beginning of a game,
  *  the remaining cards form the stock pile from which additional cards
  *  are brought into play according to the rules.
+ *
+ * @property {ICard} selectedCard
+ *  Selected card for subsequent moving.
  */
 export interface IGameBoard {
     foundations: [] | [IFoundation, IFoundation, IFoundation, IFoundation];
     tableau: [] | [IPile, IPile, IPile, IPile, IPile, IPile, IPile];
     talon: Array<ICard>;
     stock: Array<ICard>;
+    selectedCard: null | TSelectedCardFromTalon | TSelectedCardFromTableau | TSelectedCardFromFoundation;
 }

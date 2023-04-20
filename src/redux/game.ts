@@ -5,7 +5,9 @@ import pickCardsFromStockReducer from "Redux/reducers/pickCardsFromStockReducer"
 import resetStockReducer from "Redux/reducers/resetStockReducer";
 import initFoundations from "Redux/reducers/initializers/initFoundations";
 import initPiles from "Redux/reducers/initializers/initPiles";
-import {showPossibleTargetsReducer} from "Redux/reducers/showPossibleTargetsReducer";
+import showPossibleTargetsReducer from "Redux/reducers/showPossibleTargetsReducer";
+import selectCardReducer from "Redux/reducers/selectCardReducer";
+import moveSelectedCardToFoundation from "Redux/reducers/moveSelectedCardToFoundation";
 
 
 const initialState: IGameBoard = {
@@ -13,6 +15,7 @@ const initialState: IGameBoard = {
     stock: [],
     tableau: initPiles(),
     talon: [],
+    selectedCard: null,
 };
 
 export const gameBoard = createSlice({
@@ -23,6 +26,8 @@ export const gameBoard = createSlice({
         pickCardsFromStock: pickCardsFromStockReducer,
         resetStock: resetStockReducer,
         showPossibleTargets: showPossibleTargetsReducer,
+        selectCard: selectCardReducer,
+        moveSelectedCardToFoundation: moveSelectedCardToFoundation,
     }
 });
 

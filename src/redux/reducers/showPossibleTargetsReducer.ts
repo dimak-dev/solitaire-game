@@ -1,11 +1,16 @@
 import {IGameBoard} from "Types/IGameBoard";
-import {ICard} from "Types/ICard";
 import {findTargetPositions} from "Utils/findPositions";
 import {EGameBoardPart} from "Types/EGameBoardPart";
-import {PayloadAction} from "@reduxjs/toolkit";
 
-export function showPossibleTargetsReducer(state: IGameBoard, {payload: card}: PayloadAction<ICard>) {
-    const targets = findTargetPositions(state, card);
+/**
+ * Set value of possible targets on foundations and tableau.
+ */
+export default function showPossibleTargetsReducer(state: IGameBoard) {
+    if (!state.selectedCard) {
+        throw new Error('Card is not selected');
+    }
+
+    const targets = findTargetPositions(state, state.selectedCard.card);
 
     const isTargetFoundation = (i: number) => !!targets
         .find(t => t.position === EGameBoardPart.FOUNDATIONS && state.foundations[i].id === t.foundationId);

@@ -27,6 +27,7 @@ describe('Find positions of selected card', function () {
             ],
             talon: [],
             stock: [],
+            selectedCard: null,
         };
     })
 
@@ -282,6 +283,47 @@ describe('Find positions of selected card', function () {
             expect(pilesIds).toHaveLength(2);
             expect(pilesIds).toContain('test-pile-4');
             expect(pilesIds).toContain('test-pile-6');
+        });
+
+        test('RED SEVEN from first pile can occupy BLACK EIGHT on second pile', () => {
+            state.tableau[1].cards.push({isOpen: true, card: {suit: ECardSuit.DIAMOND, value: ECardValue.SEVEN, id: 'test-id-1'}});
+            state.tableau[2].cards.push({isOpen: true, card: {suit: ECardSuit.SPADE, value: ECardValue.EIGHT, id: 'test-id-2'}});
+
+            const targets = findTargetPositions(state, {suit: ECardSuit.DIAMOND, value: ECardValue.SEVEN, id: 'test-id-1'});
+
+            expect(targets).toHaveLength(1);
+            expect(targets).toStrictEqual([{position: EGameBoardPart.TABLEAU, pileId: 'test-pile-3'}]);
+        });
+
+        test('Not last card on tableau can\'t be moved to foundation', () => {
+            state.tableau[2].cards.push(
+                {isOpen: true, card: {suit: ECardSuit.DIAMOND, value: ECardValue.EIGHT, id: 'test-id-1'}},
+                {isOpen: true, card: {suit: ECardSuit.SPADE, value: ECardValue.SEVEN, id: 'test-id-2'}},
+                {isOpen: true, card: {suit: ECardSuit.HEART, value: ECardValue.SIX, id: 'test-id-3'}},
+            );
+
+            state.foundations[2].cards.push({suit: ECardSuit.SPADE, value: ECardValue.SIX, id: 'test-id-4'});
+
+            const targets = findTargetPositions(state, {suit: ECardSuit.SPADE, value: ECardValue.SEVEN, id: 'test-id-2'});
+
+            expect(targets).toHaveLength(0);
+        });
+
+        test('Not last card on tableau can occupy another pile on tableau with opened card', () => {
+            state.tableau[2].cards.push(
+                {isOpen: true, card: {suit: ECardSuit.DIAMOND, value: ECardValue.EIGHT, id: 'test-id-1'}},
+                {isOpen: true, card: {suit: ECardSuit.SPADE, value: ECardValue.SEVEN, id: 'test-id-2'}},
+                {isOpen: true, card: {suit: ECardSuit.HEART, value: ECardValue.SIX, id: 'test-id-3'}},
+            );
+
+            state.tableau[5].cards.push(
+                {isOpen: true, card: {suit: ECardSuit.HEART, value: ECardValue.EIGHT, id: 'test-id-4'}}
+            )
+
+            const targets = findTargetPositions(state, {suit: ECardSuit.SPADE, value: ECardValue.SEVEN, id: 'test-id-2'});
+
+            expect(targets).toHaveLength(1);
+            expect(targets).toStrictEqual([{position: EGameBoardPart.TABLEAU, pileId: 'test-pile-6'}]);
         });
     });
 });
