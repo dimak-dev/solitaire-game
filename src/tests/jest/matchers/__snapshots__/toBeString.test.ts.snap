@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toBeString Custom Matcher Empty object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher Empty primitive string is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: [""]"
+`;
+
+exports[`toBeString Custom Matcher Empty string as String object is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: [""]"
+`;
+
+exports[`toBeString Custom Matcher Not empty primitive string with letters is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["letters"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty primitive string with numbers is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["123456"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty primitive string with zero is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["0"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty string as String object with letters is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["letters"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty string as String object with numbers is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["123456"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty string as String object with zero is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["0"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty string by String() constructor with letters is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["letters"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty string by String() constructor with numbers is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["123456"]"
+`;
+
+exports[`toBeString Custom Matcher Not empty string by String() constructor with zero is a string 1`] = `
+"matcherHint mock, args: [".not.toBeString","received",""]
+
+Expected value must be not type of string, but string is received:
+  printReceived mock, args: ["0"]"
+`;
+
+exports[`toBeString Custom Matcher Symbol is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["symbol"]"
+`;
+
+exports[`toBeString Custom Matcher Symbol with description is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["symbol"]"
+`;
+
+exports[`toBeString Custom Matcher array with string value is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher empty array is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher extra large number as Bigint object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["bigint"]"
+`;
+
+exports[`toBeString Custom Matcher false boolean as object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeString Custom Matcher false boolean as primitive is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeString Custom Matcher false boolean as primitive is not a string 2`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeString Custom Matcher null is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher number as Bigint object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["bigint"]"
+`;
+
+exports[`toBeString Custom Matcher number as Number object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher number as primitive is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["number"]"
+`;
+
+exports[`toBeString Custom Matcher object with string value is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher true boolean as object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeString Custom Matcher true boolean as primitive is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeString Custom Matcher undefined is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["undefined"]"
+`;
+
+exports[`toBeString Custom Matcher zero number as Bigint object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["bigint"]"
+`;
+
+exports[`toBeString Custom Matcher zero number as Number object is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeString Custom Matcher zero number as primitive is not a string 1`] = `
+"matcherHint mock, args: [".toBeString","received",""]
+
+Expected:
+  printExpected mock, args: ["type of string OR instanceof String"]
+Received:
+  printReceived mock, args: ["number"]"
+`;

@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 1`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 2`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 3`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[\\"1\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 4`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 5`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 6`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[true]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 7`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[false]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 8`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 9`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Array with only one element is unique 10`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Boolean is not array 1`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Boolean is not array 2`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Boolean is not array 3`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Boolean is not array 4`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["boolean"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Empty array is unique array 1`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of boolean 1`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[true,true]"]
+
+Not unique elements:
+printExpected mock, args: ["[true]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of boolean 2`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[false,false]"]
+
+Not unique elements:
+printExpected mock, args: ["[false]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of boolean 3`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[false,false]"]
+
+Not unique elements:
+printExpected mock, args: ["[false]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of boolean 4`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[true,true]"]
+
+Not unique elements:
+printExpected mock, args: ["[true]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of boolean 5`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[true,true]"]
+
+Not unique elements:
+printExpected mock, args: ["[true]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of boolean 6`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[false,false]"]
+
+Not unique elements:
+printExpected mock, args: ["[false]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of null 1`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[null,null]"]
+
+Not unique elements:
+printExpected mock, args: ["[null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 1`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,1,1]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 2`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,2,1,3]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 3`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,1,2,3]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 4`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"1\\",\\"1\\",\\"1\\",\\"1\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"1\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 5`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"1\\",\\"2\\",\\"1\\",\\"3\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"1\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 6`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"1\\",\\"1\\",\\"2\\",\\"3\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"1\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 7`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,1,1,1]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 8`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,2,1,3]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 9`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,1,2,3]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of numbers 10`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[1,1]"]
+
+Not unique elements:
+printExpected mock, args: ["[1]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 1`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"a\\",\\"b\\",\\"c\\",\\"a\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 2`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"a\\",\\"a\\",\\"a\\",\\"a\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 3`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"a\\",\\"a\\",\\"b\\",\\"c\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 4`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"a\\",\\"a\\",\\"a\\",\\"a\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 5`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"a\\",\\"b\\",\\"c\\",\\"a\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 6`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"a\\",\\"a\\",\\"b\\",\\"c\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"a\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of strings 7`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[\\"b\\",\\"c\\",\\"b\\",\\"c\\"]"]
+
+Not unique elements:
+printExpected mock, args: ["[\\"b\\",\\"c\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of symbols 1`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[null,null,null]"]
+
+Not unique elements:
+printExpected mock, args: ["[null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Not unique array of undefined 1`] = `
+"matcherHint mock, args: [".toBeUniqueArray","received",""]
+
+Received array:
+printReceived mock, args: ["[null,null]"]
+
+Not unique elements:
+printExpected mock, args: ["[null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Number is not array 1`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["number"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Number is not array 2`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["number"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Number is not array 3`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["number"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Number is not array 4`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["number"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Number is not array 5`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["bigint"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Number is not array 6`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["bigint"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Object is not array 1`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Object is not array 2`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["object"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher String is not array 1`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["string"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher String is not array 2`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["string"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Symbol is not array 1`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["symbol"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Symbol is not array 2`] = `
+"Expected type must be array, but received:
+printReceived mock, args: ["symbol"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of boolean 1`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[true,false]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of boolean 2`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[false,true]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of numbers 1`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[1,2,3]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of numbers 2`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[\\"1\\",\\"2\\",\\"3\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of numbers 3`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[1,2,3]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of strings 1`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[\\"a\\",\\"b\\",\\"c\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of strings 2`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[\\"a\\",\\"b\\",\\"c\\"]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of symbols 1`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[null,null]"]"
+`;
+
+exports[`toBeUniqueArray Custom Matcher Unique array of symbols 2`] = `
+"matcherHint mock, args: [".not.toBeUniqueArray","received",""]
+
+All elements in received array is unique:
+printReceived mock, args: ["[null,null]"]"
+`;
