@@ -9,5 +9,10 @@ declare namespace jest {
          * Check that a variable is type of string or instanceof String.
          */
         toBeString(): R;
+
+        /**
+         * Check that all elements of array is unique.
+         */
+        toBeUniqueArray(): R;
     }
 }

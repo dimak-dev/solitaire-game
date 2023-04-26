@@ -6,6 +6,7 @@
       "Components/*": ["./src/components/*"],
       "Pages/*": ["./src/pages/*"],
       "Redux/*": ["./src/redux/*"],
+      "Tests/*": ["./src/tests/*"],
       "Types/*": ["./src/types/*"],
       "Utils/*": ["./src/utils/*"]
     },

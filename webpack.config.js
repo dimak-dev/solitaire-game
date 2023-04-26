@@ -12,6 +12,7 @@ module.exports = {
             'Components': path.resolve(__dirname, './src/components/'),
             'Pages': path.resolve(__dirname, './src/pages/'),
             'Redux': path.resolve(__dirname, './src/redux/'),
+            'Tests': path.resolve(__dirname, './src/tests/'),
             'Types': path.resolve(__dirname, './src/types/'),
             'Utils': path.resolve(__dirname, './src/utils/'),
         },
@@ -31,14 +32,14 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader'],
+                use: ['babel-loader', path.resolve(__dirname, './webpack/restrict-import-tests.js')],
                 generator: {
                     filename: 'static/js/[name].[hash][ext]'
                 }
             },
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: ['ts-loader', path.resolve(__dirname, './webpack/restrict-import-tests.js')],
                 exclude: /node_modules/,
             },
             {
