@@ -4,6 +4,7 @@ module.exports = {
             '<rootDir>/src/__mocks__/fileMock.js',
         '\\.(s?css|less)$': '<rootDir>/src/__mocks__/styleMock.js',
         '^Components(.*)$': '<rootDir>/src/components$1',
+        '^Tests(.*)$': '<rootDir>/src/tests$1',
         '^Types(.*)$': '<rootDir>/src/types$1',
         '^Redux(.*)$': '<rootDir>/src/redux$1',
         '^Utils(.*)$': '<rootDir>/src/utils$1',
@@ -12,7 +13,7 @@ module.exports = {
     roots: ['<rootDir>/src'],
     collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
     setupFilesAfterEnv: [
-        '<rootDir>/src/setupTests.ts'
+        '<rootDir>/src/tests/jest/setup.ts'
     ],
     setupFiles: [
         'react-app-polyfill/jsdom'
@@ -20,4 +21,5 @@ module.exports = {
     testMatch: [
         '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}',
     ],
+    collectCoverage: true,
 };

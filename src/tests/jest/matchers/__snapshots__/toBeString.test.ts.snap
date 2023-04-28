@@ -65,27 +65,6 @@ Expected value must be not type of string, but string is received:
   printReceived mock, args: ["0"]"
 `;
 
-exports[`toBeString Custom Matcher Not empty string by String() constructor with letters is a string 1`] = `
-"matcherHint mock, args: [".not.toBeString","received",""]
-
-Expected value must be not type of string, but string is received:
-  printReceived mock, args: ["letters"]"
-`;
-
-exports[`toBeString Custom Matcher Not empty string by String() constructor with numbers is a string 1`] = `
-"matcherHint mock, args: [".not.toBeString","received",""]
-
-Expected value must be not type of string, but string is received:
-  printReceived mock, args: ["123456"]"
-`;
-
-exports[`toBeString Custom Matcher Not empty string by String() constructor with zero is a string 1`] = `
-"matcherHint mock, args: [".not.toBeString","received",""]
-
-Expected value must be not type of string, but string is received:
-  printReceived mock, args: ["0"]"
-`;
-
 exports[`toBeString Custom Matcher Symbol is not a string 1`] = `
 "matcherHint mock, args: [".toBeString","received",""]
 
@@ -149,15 +128,6 @@ Received:
   printReceived mock, args: ["boolean"]"
 `;
 
-exports[`toBeString Custom Matcher false boolean as primitive is not a string 2`] = `
-"matcherHint mock, args: [".toBeString","received",""]
-
-Expected:
-  printExpected mock, args: ["type of string OR instanceof String"]
-Received:
-  printReceived mock, args: ["boolean"]"
-`;
-
 exports[`toBeString Custom Matcher null is not a string 1`] = `
 "matcherHint mock, args: [".toBeString","received",""]
 
@@ -182,7 +152,7 @@ exports[`toBeString Custom Matcher number as Number object is not a string 1`] =
 Expected:
   printExpected mock, args: ["type of string OR instanceof String"]
 Received:
-  printReceived mock, args: ["object"]"
+  printReceived mock, args: ["number"]"
 `;
 
 exports[`toBeString Custom Matcher number as primitive is not a string 1`] = `
@@ -245,7 +215,7 @@ exports[`toBeString Custom Matcher zero number as Number object is not a string 
 Expected:
   printExpected mock, args: ["type of string OR instanceof String"]
 Received:
-  printReceived mock, args: ["object"]"
+  printReceived mock, args: ["number"]"
 `;
 
 exports[`toBeString Custom Matcher zero number as primitive is not a string 1`] = `
