@@ -4,6 +4,8 @@ This is a pet project that demonstrates my experience in step-by-step frontend d
 The development goes with coverages by tests.
 It's a solitaire game, where the player aims to move all the cards to the foundation piles in the correct order.
 
+If you have any questions or propositions, you can contact me by email: [github@dimak.dev](mailto:github@dimak.dev?subject=GitHub%20solitaire-game).
+
 Currently, this project is under development in my free time.
 
 ## Features
