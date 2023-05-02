@@ -1,70 +1,93 @@
-# Getting Started with Create React LearnReact
+# Solitaire Game - React and TypeScript
 
-This project was bootstrapped with [Create React LearnReact](https://github.com/facebook/create-react-app).
+This is a pet project that demonstrates my experience in step-by-step frontend development using the whole most popular frontend stack: React, Redux, Typescript and Jest.
+The development goes with coverages by tests.
+It's a solitaire game, where the player aims to move all the cards to the foundation piles in the correct order.
 
-## Available Scripts
+Currently, this project is under development in my free time.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Generating pack of cards.
+- Building tableau.
+- Detecting current position of selected card and possible targets.
+- Manually moving card from talon and tableau to the foundation piles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ToDo Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Drag and drop functionality for moving cards between tableau and to the foundation piles.
+- Double click to automatically move cards to the foundation piles.
+- Undo and redo functionality.
+- Game timer to track the player's progress.
+- Hint button to suggest possible moves.
 
-### `npm test`
+## About tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+My point of view on tests is, as far as possible, to write tests (or test cases) before development (TDD).
+The tests must cover only functionality realised in this function or component. 
+For that, you must use mocks for a [whole module](src/redux/reducers/showPossibleTargetsReducer.test.ts) or just only one method (even [built-in](src/utils/shuffle.test.ts))
 
-### `npm run build`
+For example, in this project, I developed some [additional matchers](src/tests/jest/matchers) for jest and covered them with tests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the application locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/your-username/solitaire.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Navigate to the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd solitaire-game
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install the dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+4. Run tests:
 
-You can learn more in the [Create React LearnReact documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm test
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Start the application:
 
-### Code Splitting
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   The application will be available at [http://localhost:9000](http://localhost:9000).
 
-### Analyzing the Bundle Size
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React
+- Redux
+- TypeScript
+- SCSS
+- Material UI
 
-### Making a Progressive Web LearnReact
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `public/`: Contains the index.html file and other static assets.
+- `src/`: Contains the source code for the application.
+- `src/components/`: Contains the React components used to build ui for the application.
+- `src/utils/`: Contains utility functions and constants used in the application.
+- `src/redux/`: Contains state managers used in the application.
+- `src/tests/`: Contains configurations and helpers for jest.
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project was inspired by the classic solitaire game and was created as a demonstration of my frontend development skills. Special thanks to the following resources for providing guidance and inspiration:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React documentation](https://reactjs.org/docs/getting-started.html)
+- [Redux documentation](https://redux.js.org/introduction/getting-started)
+- [Solitaire game rules](https://www.bicyclecards.com/how-to-play/solitaire/)
+- [Material UI documentation](https://mui.com/material-ui/getting-started/overview/)
+- [Jest documentation](https://jestjs.io/docs/getting-started)
