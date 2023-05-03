@@ -1,0 +1,63 @@
+import {ICard} from "Types/ICard";
+import {ECardValue} from "Types/ECardValue";
+import {ECardSuit} from "Types/ECardSuit";
+
+/**
+ * @type {Record<string, Readonly<ICard>>}
+ */
+const TestCard: Readonly<Record<string, Readonly<ICard>>> = {
+    ACE_SPADE: {id: 'test-card-ace-spade', value: ECardValue.ACE, suit: ECardSuit.SPADE},
+    ACE_DIAMOND: {id: 'test-card-ace-diamond', value: ECardValue.ACE, suit: ECardSuit.DIAMOND},
+    ACE_HEART: {id: 'test-card-ace-heart', value: ECardValue.ACE, suit: ECardSuit.HEART},
+    ACE_CLUB: {id: 'test-card-ace-club', value: ECardValue.ACE, suit: ECardSuit.CLUB},
+    ONE_SPADE: {id: 'test-card-one-spade', value: ECardValue.ONE, suit: ECardSuit.SPADE},
+    ONE_DIAMOND: {id: 'test-card-one-diamond', value: ECardValue.ONE, suit: ECardSuit.DIAMOND},
+    ONE_HEART: {id: 'test-card-one-heart', value: ECardValue.ONE, suit: ECardSuit.HEART},
+    ONE_CLUB: {id: 'test-card-one-club', value: ECardValue.ONE, suit: ECardSuit.CLUB},
+    TWO_SPADE: {id: 'test-card-two-spade', value: ECardValue.TWO, suit: ECardSuit.SPADE},
+    TWO_DIAMOND: {id: 'test-card-two-diamond', value: ECardValue.TWO, suit: ECardSuit.DIAMOND},
+    TWO_HEART: {id: 'test-card-two-heart', value: ECardValue.TWO, suit: ECardSuit.HEART},
+    TWO_CLUB: {id: 'test-card-two-club', value: ECardValue.TWO, suit: ECardSuit.CLUB},
+    THREE_SPADE: {id: 'test-card-three-spade', value: ECardValue.THREE, suit: ECardSuit.SPADE},
+    THREE_DIAMOND: {id: 'test-card-three-diamond', value: ECardValue.THREE, suit: ECardSuit.DIAMOND},
+    THREE_HEART: {id: 'test-card-three-heart', value: ECardValue.THREE, suit: ECardSuit.HEART},
+    THREE_CLUB: {id: 'test-card-three-club', value: ECardValue.THREE, suit: ECardSuit.CLUB},
+    FOUR_SPADE: {id: 'test-card-four-spade', value: ECardValue.FOUR, suit: ECardSuit.SPADE},
+    FOUR_DIAMOND: {id: 'test-card-four-diamond', value: ECardValue.FOUR, suit: ECardSuit.DIAMOND},
+    FOUR_HEART: {id: 'test-card-four-heart', value: ECardValue.FOUR, suit: ECardSuit.HEART},
+    FOUR_CLUB: {id: 'test-card-four-club', value: ECardValue.FOUR, suit: ECardSuit.CLUB},
+    FIVE_SPADE: {id: 'test-card-five-spade', value: ECardValue.FIVE, suit: ECardSuit.SPADE},
+    FIVE_DIAMOND: {id: 'test-card-five-diamond', value: ECardValue.FIVE, suit: ECardSuit.DIAMOND},
+    FIVE_HEART: {id: 'test-card-five-heart', value: ECardValue.FIVE, suit: ECardSuit.HEART},
+    FIVE_CLUB: {id: 'test-card-five-club', value: ECardValue.FIVE, suit: ECardSuit.CLUB},
+    SIX_SPADE: {id: 'test-card-six-spade', value: ECardValue.SIX, suit: ECardSuit.SPADE},
+    SIX_DIAMOND: {id: 'test-card-six-diamond', value: ECardValue.SIX, suit: ECardSuit.DIAMOND},
+    SIX_HEART: {id: 'test-card-six-heart', value: ECardValue.SIX, suit: ECardSuit.HEART},
+    SIX_CLUB: {id: 'test-card-six-club', value: ECardValue.SIX, suit: ECardSuit.CLUB},
+    SEVEN_SPADE: {id: 'test-card-seven-spade', value: ECardValue.SEVEN, suit: ECardSuit.SPADE},
+    SEVEN_DIAMOND: {id: 'test-card-seven-diamond', value: ECardValue.SEVEN, suit: ECardSuit.DIAMOND},
+    SEVEN_HEART: {id: 'test-card-seven-heart', value: ECardValue.SEVEN, suit: ECardSuit.HEART},
+    SEVEN_CLUB: {id: 'test-card-seven-club', value: ECardValue.SEVEN, suit: ECardSuit.CLUB},
+    EIGHT_SPADE: {id: 'test-card-eight-spade', value: ECardValue.EIGHT, suit: ECardSuit.SPADE},
+    EIGHT_DIAMOND: {id: 'test-card-eight-diamond', value: ECardValue.EIGHT, suit: ECardSuit.DIAMOND},
+    EIGHT_HEART: {id: 'test-card-eight-heart', value: ECardValue.EIGHT, suit: ECardSuit.HEART},
+    EIGHT_CLUB: {id: 'test-card-eight-club', value: ECardValue.EIGHT, suit: ECardSuit.CLUB},
+    NINE_SPADE: {id: 'test-card-nine-spade', value: ECardValue.NINE, suit: ECardSuit.SPADE},
+    NINE_DIAMOND: {id: 'test-card-nine-diamond', value: ECardValue.NINE, suit: ECardSuit.DIAMOND},
+    NINE_HEART: {id: 'test-card-nine-heart', value: ECardValue.NINE, suit: ECardSuit.HEART},
+    NINE_CLUB: {id: 'test-card-nine-club', value: ECardValue.NINE, suit: ECardSuit.CLUB},
+    JACK_SPADE: {id: 'test-card-jack-spade', value: ECardValue.JACK, suit: ECardSuit.SPADE},
+    JACK_DIAMOND: {id: 'test-card-jack-diamond', value: ECardValue.JACK, suit: ECardSuit.DIAMOND},
+    JACK_HEART: {id: 'test-card-jack-heart', value: ECardValue.JACK, suit: ECardSuit.HEART},
+    JACK_CLUB: {id: 'test-card-jack-club', value: ECardValue.JACK, suit: ECardSuit.CLUB},
+    QUEEN_SPADE: {id: 'test-card-queen-spade', value: ECardValue.QUEEN, suit: ECardSuit.SPADE},
+    QUEEN_DIAMOND: {id: 'test-card-queen-diamond', value: ECardValue.QUEEN, suit: ECardSuit.DIAMOND},
+    QUEEN_HEART: {id: 'test-card-queen-heart', value: ECardValue.QUEEN, suit: ECardSuit.HEART},
+    QUEEN_CLUB: {id: 'test-card-queen-club', value: ECardValue.QUEEN, suit: ECardSuit.CLUB},
+    KING_SPADE: {id: 'test-card-king-spade', value: ECardValue.KING, suit: ECardSuit.SPADE},
+    KING_DIAMOND: {id: 'test-card-king-diamond', value: ECardValue.KING, suit: ECardSuit.DIAMOND},
+    KING_HEART: {id: 'test-card-king-heart', value: ECardValue.KING, suit: ECardSuit.HEART},
+    KING_CLUB: {id: 'test-card-king-club', value: ECardValue.KING, suit: ECardSuit.CLUB},
+}
+
+export default TestCard;
