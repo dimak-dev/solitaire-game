@@ -146,4 +146,6 @@ describe('Show possible targets for selected card - Reducer', () => {
         expect(state.tableau[5].isTarget).toBeFalsy();
         expect(state.tableau[6].isTarget).toBeFalsy();
     });
+
+    test.todo('When selected card on tableau is not last, foundations couldn\'t be as target');
 });

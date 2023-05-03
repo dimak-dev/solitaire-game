@@ -7,7 +7,7 @@ import initFoundations from "Redux/reducers/initializers/initFoundations";
 import initPiles from "Redux/reducers/initializers/initPiles";
 import showPossibleTargetsReducer from "Redux/reducers/showPossibleTargetsReducer";
 import selectCardReducer from "Redux/reducers/selectCardReducer";
-import moveSelectedCardToFoundation from "Redux/reducers/moveSelectedCardToFoundation";
+import moveSelectedCardToTargetReducer from "Redux/reducers/moveSelectedCardToTargetReducer";
 
 
 const initialState: IGameBoard = {
@@ -27,7 +27,7 @@ export const gameBoard = createSlice({
         resetStock: resetStockReducer,
         showPossibleTargets: showPossibleTargetsReducer,
         selectCard: selectCardReducer,
-        moveSelectedCardToFoundation: moveSelectedCardToFoundation,
+        moveSelectedCardToTarget: moveSelectedCardToTargetReducer,
     }
 });
 

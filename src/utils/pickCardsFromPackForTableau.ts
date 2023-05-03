@@ -8,18 +8,18 @@ interface IResultAfterPickingForTableauPile {
 }
 
 /**
- * Pick some cards to the tableau pile.
+ * Pick some cards from pack for tableau.
  *
- * @param {Array<ICard>} packOfCard Pack of card for picking.
+ * @param {Array<ICard>} packOfCards Pack of card for picking.
  * @param {number} countOfHiddenCards Count of hidden cards in pile.
  */
-export function pickCardsForTableauPile(packOfCard: Array<ICard>, countOfHiddenCards: number): IResultAfterPickingForTableauPile {
-    if (packOfCard.length < (countOfHiddenCards + 1)) {
+export function pickCardsFromPackForTableau(packOfCards: Array<ICard>, countOfHiddenCards: number): IResultAfterPickingForTableauPile {
+    if (packOfCards.length < (countOfHiddenCards + 1)) {
         throw new Error('Insufficient cards in pack.');
     }
 
-    const restPackOfCard = [...packOfCard];
-    const pickedCards = restPackOfCard.splice(packOfCard.length - countOfHiddenCards - 1, countOfHiddenCards + 1);
+    const restPackOfCard = [...packOfCards];
+    const pickedCards = restPackOfCard.splice(packOfCards.length - countOfHiddenCards - 1, countOfHiddenCards + 1);
 
     return {
         restPackOfCard,

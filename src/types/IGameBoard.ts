@@ -9,13 +9,13 @@ import {EGameBoardPart} from "Types/EGameBoardPart";
  * @property {string} id Id of foundation.
  * @property {ECardSuit} [suit] Suit of pile.
  * @property {Array<ICard>} cards Cards on foundation.
- * @property {boolean} isTarget Is target for previously selected card.
+ * @property {boolean} [isTarget] Is target for previously selected card.
  */
 export interface IFoundation {
     id: string;
     suit?: ECardSuit;
     cards: Array<ICard>;
-    isTarget: boolean;
+    isTarget?: boolean;
 }
 
 /**

@@ -1,5 +1,5 @@
 import {IGameBoard} from "Types/IGameBoard";
-import {pickCardsForTableauPile} from "Utils/game";
+import {pickCardsFromPackForTableau} from "Utils/pickCardsFromPackForTableau";
 import {initializeShuffledPackOfCards} from "Utils/packOfCards";
 import initFoundations from "Redux/reducers/initializers/initFoundations";
 import initPiles from "Redux/reducers/initializers/initPiles";
@@ -16,7 +16,7 @@ export default function newGameReducer(state: IGameBoard): void {
     const piles = initPiles();
 
     for (let i = 0; i < 7; i++) {
-        const {cardsInPile, restPackOfCard} = pickCardsForTableauPile(packOfCard, i);
+        const {cardsInPile, restPackOfCard} = pickCardsFromPackForTableau(packOfCard, i);
         packOfCard = restPackOfCard;
         piles[i].cards = cardsInPile;
     }

@@ -34,11 +34,11 @@ export default function Board() {
     }
 
     const onTargetOnTableauClick = (pileId: IPile['id']) => {
-        // dispatch(gameBoardActions.moveSelectedCardToFoundation)
+        dispatch(gameBoardActions.moveSelectedCardToTarget({target: EGameBoardPart.TABLEAU, pileId}));
     };
 
     const onTargetOnFoundationClick = (foundationId: IFoundation['id']) => {
-        dispatch(gameBoardActions.moveSelectedCardToFoundation(foundationId));
+        dispatch(gameBoardActions.moveSelectedCardToTarget({target: EGameBoardPart.FOUNDATIONS, foundationId}));
     }
 
     return (

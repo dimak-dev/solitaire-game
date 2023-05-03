@@ -23,6 +23,14 @@ Currently, this project is under development in my free time.
 - Game timer to track the player's progress.
 - Hint button to suggest possible moves.
 
+## Known issues:
+
+- Target hints do not reset after moving the card.
+- There is no visible hint of the previously laid card on the foundation.
+- The player can't pick a card from the foundation if previously moving was to the foundation.
+- Big bug: There is no card with the value "10", but exists with the value "1".
+- Need to refactor duplicates in the reducer code.
+
 ## About tests
 
 My point of view on tests is, as far as possible, to write tests (or test cases) before development (TDD).
